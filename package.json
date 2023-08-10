@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "gang_dramma <your_email@kottaholakottahola@gmail.com>",
+  "license": "ISC",
+  "repository": "https://github.com/abdullohsiddiqov/tic_tac_toe_abdulloh.git"
 }

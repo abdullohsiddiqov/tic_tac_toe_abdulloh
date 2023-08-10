@@ -1,9 +1,9 @@
 let container = document.querySelector('.container');
 let cells = document.querySelectorAll('.cell');
 let restart = document.querySelector('button');
-// let cont = document.querySelectorAll(".btn-container");
-// let audio = new Audio("sound.mp3");
-// let currentPlayer = "O";
+let cont = document.querySelectorAll(".btn-container");
+let audio = new Audio("sound.mp3");
+let currentPlayer = "O";
 type Turn = "X" | "O" | "";
 let turn: Turn = "X"
 function main(): void{ // bunga nma qymat qaytarwn yozamz
@@ -17,11 +17,11 @@ function createCell(): void{
     }
 }
 
-// cont.forEach((con)=>{ 
-//     con.addEventListener("click",()=>{ 
-//         audio.play();
-//     });
-// });
+cont.forEach((con)=>{ 
+    con.addEventListener("click",()=>{ 
+        audio.play();
+    });
+});
 
 restart?.addEventListener("click", ()=>{ 
     cells.forEach((cell)=>{ 
@@ -57,7 +57,7 @@ function makeContainer(): void{
 }
 
 function runGame(e: Event): void{ 
-    let cellsId: string = (<HTMLElement>e.target).id;//html elementan event bogan bosgan div id sini olad
+    let cellsId: string = (<HTMLElement>e.target).id;//html eementan event bogan bosgan div id sini olad
     console.log(cellsId);
     if(cellsId === null)return;
     

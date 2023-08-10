@@ -1,6 +1,9 @@
 let container = document.querySelector(".container");
 let cells = document.querySelectorAll(".cell");
 let restart = document.querySelector("button");
+let cont = document.querySelectorAll(".btn-container");
+let audio = new Audio("sound.mp3");
+let currentPlayer = "O";
 let turn = "X";
 function main() {
     createCell();
@@ -9,11 +12,11 @@ function main() {
 function createCell() {
     for(let i = 0; i < 9; i++)makeCell(i);
 }
-// cont.forEach((con)=>{ 
-//     con.addEventListener("click",()=>{ 
-//         audio.play();
-//     });
-// });
+cont.forEach((con)=>{
+    con.addEventListener("click", ()=>{
+        audio.play();
+    });
+});
 restart?.addEventListener("click", ()=>{
     cells.forEach((cell)=>{
         cell.innerHTML = "";
@@ -38,7 +41,7 @@ function makeContainer() {
     container?.addEventListener("click", runGame);
 }
 function runGame(e) {
-    let cellsId = e.target.id; //html elementan event bogan bosgan div id sini olad
+    let cellsId = e.target.id; //html eementan event bogan bosgan div id sini olad
     console.log(cellsId);
     if (cellsId === null) return;
 }
